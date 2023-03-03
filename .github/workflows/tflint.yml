@@ -24,11 +24,11 @@ jobs:
       run: tflint --version
 
     - name: Init TFLint
-      working-directory: ./terraform
+      working-directory: ./modules
       run: tflint --init
 
     - name: Run TFLint
-      working-directory: ./terraform
+      working-directory: ./modules
       run: tflint -f compact --recursive
 
   terragrunt:
